@@ -7,6 +7,7 @@ import blog3 from "./Images/img3.jpeg";
 import blog4 from "./Images/img4.jpeg";
 import blog5 from "./Images/img5.jpeg";
 import blog6 from "./Images/img6.jpeg";
+import Footer from './Footer';
 
 const Blog = () => {
     const navigate = useNavigate();
@@ -79,6 +80,7 @@ const Blog = () => {
                     </div>
                 </div>
             ))}
+            <Footer/>
         </div>
     );
 };
