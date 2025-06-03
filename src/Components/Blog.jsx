@@ -62,26 +62,29 @@ const Blog = () => {
     };
 
     return (
-        <div className="flex flex-wrap justify-center gap-4 px-4 py-10">
-            {blogs.map((blog, index) => (
-                <div
-                    key={index}
-                    className="flex-grow basis-[260px] max-w-[340px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 m-4 cursor-pointer"
-                    onClick={() => openBlog(blog)}
-                >
-                    <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover object-center rounded-t-2xl" />
-                    <div className="p-4 flex flex-col gap-2">
-                        <h2 className="text-lg font-semibold text-gray-800">{blog.title}</h2>
-                        <p className="text-sm text-gray-600">{blog.summary}</p>
-                        <div className="flex items-center justify-between mt-2">
-                            <p className="text-xs text-gray-500">{blog.date} • {blog.author}</p>
-                            <FontAwesomeIcon icon={faPenNib} className="text-orange-700 text-base" />
+        <>
+            <div className="flex flex-wrap justify-center gap-4 px-4 py-10">
+                {blogs.map((blog, index) => (
+                    <div
+                        key={index}
+                        className="flex-grow basis-[260px] max-w-[340px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 m-4 cursor-pointer"
+                        onClick={() => openBlog(blog)}
+                    >
+                        <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover object-center rounded-t-2xl" />
+                        <div className="p-4 flex flex-col gap-2">
+                            <h2 className="text-lg font-semibold text-gray-800">{blog.title}</h2>
+                            <p className="text-sm text-gray-600">{blog.summary}</p>
+                            <div className="flex items-center justify-between mt-2">
+                                <p className="text-xs text-gray-500">{blog.date} • {blog.author}</p>
+                                <FontAwesomeIcon icon={faPenNib} className="text-orange-700 text-base" />
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
-            <Footer/>
-        </div>
+                ))}
+            </div>
+            <Footer />
+
+        </>
     );
 };
 
